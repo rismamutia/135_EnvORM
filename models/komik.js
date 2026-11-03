@@ -1,7 +1,5 @@
-const { Sequelize, DataTypes } = require("sequelize");
-
 module.exports=(sequelize, DataTypes) => {
-    const Komik = Sequelize.define("komik", {
+    const Komik = sequelize.define("komik", {
         id:{
             type : DataTypes.INTEGER,
             autoIncrement:true,
@@ -19,5 +17,5 @@ module.exports=(sequelize, DataTypes) => {
             allowNull:false,
         },
     });
-    return Komik;
+    return Komik
 }
